@@ -409,14 +409,41 @@ footer {
     background: var(--accent-color);
 }
 
-/* Press Bar */
+/* Press Bar Marquee */
+.press-bar-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 6rem;
+    position: relative;
+}
+
+.press-bar-container::before,
+.press-bar-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.press-bar-container::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.press-bar-container::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff, transparent);
+}
+
 .press-bar {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    white-space: nowrap;
+    animation: slide-left 30s linear infinite;
     opacity: 0.5;
-    margin-top: 4rem;
+    width: max-content;
 }
 
 .press-bar span {
@@ -424,8 +451,13 @@ footer {
     font-weight: 900;
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin: 1rem;
+    margin: 0 4rem;
     font-family: serif; /* Classic contrast */
+}
+
+@keyframes slide-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 /* Animations */
