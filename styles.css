@@ -64,6 +64,44 @@ p {
     position: relative;
 }
 
+/* White Section for High Contrast */
+.section-white {
+    background-color: #ffffff;
+    color: #050505;
+}
+
+.section-white h1, 
+.section-white h2, 
+.section-white h3, 
+.section-white p {
+    color: #050505;
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+}
+
+.section-white .card {
+    background: #f5f5f5;
+    border-color: #e0e0e0;
+}
+
+.section-white .card:hover {
+    background: #ebebeb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section-white .card::before {
+    background: linear-gradient(90deg, transparent, #050505, transparent);
+}
+
+.section-white .card-icon {
+    color: #050505;
+}
+
+.section-white .step-number {
+    color: #e0e0e0;
+}
+
 /* Navbar */
 .navbar {
     position: fixed;
