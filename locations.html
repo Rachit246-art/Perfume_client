@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations & Contact | AURA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">AURA</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="locations.html" class="active">Locations</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 120px;">
+        <div class="container fade-in">
+            <h1 class="text-center">Find a Boutique</h1>
+            <p class="text-center" style="margin-left: auto; margin-right: auto;">Discover our automated boutiques in premier locations worldwide.</p>
+            
+            <div class="grid mt-4">
+                <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="height: 200px; overflow: hidden;">
+                        <img src="map.png" alt="Location Map" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                    </div>
+                    <div style="padding: 2rem;">
+                        <h3>The Grand Plaza</h3>
+                        <p style="margin-bottom: 0;">Level 1, Luxury Wing<br>New York, NY 10019</p>
+                    </div>
+                </div>
+                
+                <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="height: 200px; overflow: hidden;">
+                        <img src="map.png" alt="Location Map" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                    </div>
+                    <div style="padding: 2rem;">
+                        <h3>Metro Airport</h3>
+                        <p style="margin-bottom: 0;">Terminal 4, Gate B12<br>Los Angeles, CA 90045</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="max-width: 600px; margin: 6rem auto 0; background: var(--glass-bg); padding: 3rem; border: 1px solid var(--glass-border); border-radius: 8px;" class="fade-in">
+                <h2 class="text-center">Partner With Us</h2>
+                <p class="text-center">Interested in hosting an AURA boutique?</p>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Proposed Location</label>
+                        <input type="text" id="location" class="form-control" placeholder="City, Venue Type">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="event.preventDefault(); alert('Form submitted!');">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AURA Automated Boutiques. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
